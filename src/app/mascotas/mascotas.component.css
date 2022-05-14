@@ -1,0 +1,47 @@
+.container .carousel-inner > .item > img,
+.container .carousel-inner > .item > a > img {
+  width: 30%;
+  margin: auto;
+}
+
+.container .carousel-caption > p,
+.container .carousel-caption > h3 {
+  font-size: 25px;
+}
+
+.container .contBuscar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.container .contBuscar .contForm {
+  width: 40%;
+  padding: 1%;
+  border: .1px dotted cadetblue;
+}
+
+.container .contTexto {
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container .carousel-caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.imgPet {
+  min-width: 300px;
+  min-height: 300px;
+}
+/*# sourceMappingURL=mascotas.component.css.map */

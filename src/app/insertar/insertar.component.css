@@ -1,0 +1,27 @@
+.container {
+  margin-top: 5%;
+}
+
+.container .imgPet {
+  position: fixed;
+  right: 20%;
+}
+
+.container .contForm {
+  width: 60%;
+}
+
+.container .contFormButton {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container .contFormButton .button {
+  margin-top: 2%;
+  width: 40%;
+}
+/*# sourceMappingURL=insertar.component.css.map */

@@ -1,0 +1,39 @@
+<div class="container" *ngFor="let arPetMod of arrayMascotasMod">
+    <div class="contForm">
+        <label for="CtrlInpName" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="CtrlInpName" placeholder="Nombre de la Mascota" value="{{arPetMod.name}}" #CtrlInpName>
+        <img id="imgPet" class="imgPet" src="https://picsum.photos/200/200" alt="" #imgPet>
+    </div>
+
+    <div class="contForm">
+        <label for="CtrlInpCategory" class="form-label">Categoría</label>
+        <select class="form-select" id="CtrlInpCategory" #CtrlInpCategory>
+            <option selected disabled>Seleccionar Categoria</option>
+            <option value="{{arCategory.id_category}}" *ngFor="let arCategory of arrayCategory">{{arCategory.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="contForm">
+        <label for="CtrlInpTags" class="form-label">Tags</label>
+        <select class="form-select" id="CtrlInpTags" #CtrlInpTags>
+            <option selected disabled>Seleccionar Tags</option>
+            <option value="{{arTags.id_tag}}" *ngFor="let arTags of arrayTag ">{{arTags.name}}
+            </option>
+        </select>
+    </div>
+    
+    <div class="contForm">
+        <label for="CtrlInpStatus" class="form-label">Status</label>
+        <select class="form-select" id="CtrlInpStatus" #CtrlInpStatus>
+            <option selected disabled>Seleccionar Estado</option>
+            <option value="{{arStatus.id_status}}" *ngFor="let arStatus of arrayStatus ">{{arStatus.name}}
+            </option>
+        </select>
+    </div>
+
+    <div class="contFormButton">
+        <button class="btn btn-primary button" type="submit" (click)="this.guardarMascota(arPetMod.id_pet, CtrlInpName.value, imgPet.src, CtrlInpCategory.value, CtrlInpTags.value, CtrlInpStatus.value)">Guardar</button>
+        <button class="btn btn-primary button" type="submit" (click)="this.eliminarMascota(arPetMod.id_pet)">Eliminar</button>
+    </div>
+</div>

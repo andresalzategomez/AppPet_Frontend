@@ -1,0 +1,38 @@
+.container {
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 30%;
+    margin: auto;
+  }
+
+  .carousel-caption > p,
+  .carousel-caption > h3 {
+    font-size: 25px;
+  }
+
+  .contBuscar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 5%;
+
+    .contForm {
+      width: 40%;
+      padding: 1%;
+      border: .1px dotted cadetblue;
+    }
+  }
+  .contTexto {
+    width: 30%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+  .carousel-caption {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.imgPet{
+  min-width: 300px;
+  min-height: 300px;
+}

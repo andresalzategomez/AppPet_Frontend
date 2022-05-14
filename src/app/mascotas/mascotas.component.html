@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="contBuscar">
+        <div class="contForm">
+            <div>
+                <label for="CtrlInpCategory" class="form-label">Categoría</label>
+                <input type="text" class="form-control" id="" placeholder="Ingresa codigo de Mascota" #IdBuscar>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="this.selectMascotaById(IdBuscar.value)">Buscar</button>
+                </div>
+            </div>
+        </div>
+        <div class="contForm">
+            <div>
+                <label for="CtrlInpCategory" class="form-label">Status</label>
+                <input type="text" class="form-control" id="" placeholder="Ingresa [1] available [2]. pending [3]. sold" #statusBuscar>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="this.selectMascotaByStatus(statusBuscar.value)" >Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="imgPet" src="https://picsum.photos/300/200" alt="" width="460" height="345">
+                <div class="carousel-caption">
+                    <div class="contTexto">
+                        <h2>Mis Mascotas</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="item" *ngFor="let pets of this.arrayMascotas">
+                <img class="imgPet" src="{{pets.photoUrl}}" alt="" width="460" height="345" (click)="this.ModificarMascota(pets)">
+                <!-- <img class="imgPet" src="{{pets.photoUrl}}" alt="" width="460" height="345" (click)="this.ModificarMascota(pets.name, pets.photoUrl,pets.id_category, pets.id_tag, pets.id_status)"> -->
+                <div class="carousel-caption">
+                    <div class="contTexto">
+                        <h2>{{pets.name}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

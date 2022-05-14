@@ -1,0 +1,22 @@
+.container {
+  margin-top: 5%;
+
+  .imgPet {
+    position: fixed;
+    right: 20%;
+  }
+
+  .contForm {
+    width: 60%;
+  }
+
+  .contFormButton {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    .button {
+      margin-top: 2%;
+      width: 40%;
+    }
+  }
+}
